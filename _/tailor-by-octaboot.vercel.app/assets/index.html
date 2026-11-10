@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OCTABOOT — The Anatomy of a Suit</title>
+  <meta name="description" content="OCTABOOT bespoke tailoring. Eight movements of craft, from the measure of a man to the last quarter-inch of a working cuff." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <!-- ===== Loader ===== -->
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader__mark">
+      <img src="assets/img/octaboot.png" alt="" />
+    </div>
+    <div class="loader__bar"><span id="loaderFill"></span></div>
+    <div class="loader__pct"><span id="loaderPct">0</span><i>%</i></div>
+    <div class="loader__label">Preparing the atelier</div>
+  </div>
+
+  <!-- ===== Header ===== -->
+  <header class="site-header" id="header">
+    <a class="brand" href="#top" aria-label="Octaboot home">
+      <img class="brand__mark" src="assets/img/octaboot.png" alt="" />
+      <span class="brand__word">OCTABOOT</span>
+    </a>
+    <nav class="nav">
+      <a href="#atelier">Atelier</a>
+      <a href="#collection">Collection</a>
+      <a class="nav__cta" href="#book">Book a Fitting</a>
+    </nav>
+  </header>
+
+  <main id="top">
+
+    <!-- ===== The scroll scene (pinned canvas + editorial panels) ===== -->
+    <section class="scene" id="scene" aria-label="The making of an Octaboot suit">
+      <div class="sticky" id="sticky">
+
+        <canvas id="frames" class="frames-canvas"></canvas>
+
+        <!-- cinematic overlays -->
+        <div class="grade grade--vignette"></div>
+        <div class="grade grade--top"></div>
+        <div class="grade grade--bottom"></div>
+        <div class="grain"></div>
+
+        <!-- Hero title (Movement 00 — over the particle form) -->
+        <div class="panel panel--hero" data-panel="hero">
+          <p class="eyebrow">Octaboot · Bespoke Since MCMXC8</p>
+          <h1 class="hero-title">The Anatomy<br><em>of a Suit</em></h1>
+          <div class="scroll-cue"><span></span>Scroll</div>
+        </div>
+
+        <!-- Editorial panels, alternating left / right -->
+        <article class="panel panel--left" data-panel="1">
+          <span class="panel__index">01</span>
+          <p class="panel__kicker">The Foundation</p>
+          <h2 class="panel__title">A Shirt of<br>Pure Cotton</h2>
+          <p class="panel__spec"><i>Cloth</i> Egyptian Two-Ply Poplin · 120s</p>
+        </article>
+
+        <article class="panel panel--right" data-panel="2">
+          <span class="panel__index">02</span>
+          <p class="panel__kicker">The Waistcoat</p>
+          <h2 class="panel__title">Structure,<br>Held Close</h2>
+          <p class="panel__body">The waistcoat draws the line of the body inward. Five buttons, a silk-backed rear, and a tie cut on the bias so the knot falls true and never twists.</p>
+          <p class="panel__spec"><i>Silk</i> Mulberry, Woven in Como</p>
+        </article>
+
+        <article class="panel panel--left" data-panel="3">
+          <span class="panel__index">03</span>
+          <p class="panel__kicker">The Canvas</p>
+          <h2 class="panel__title">Built on<br>Full Canvas</h2>
+          <p class="panel__spec"><i>Construction</i> Hand-Padded Full Canvas</p>
+        </article>
+
+        <article class="panel panel--right" data-panel="4">
+          <span class="panel__index">04</span>
+          <p class="panel__kicker">The Cut</p>
+          <h2 class="panel__title">The Complete<br>Silhouette</h2>
+          <p class="panel__spec"><i>Cloth</i> Super 150's Merino · 240g</p>
+        </article>
+
+        <article class="panel panel--left" data-panel="5">
+          <span class="panel__index">05</span>
+          <p class="panel__kicker">The Man</p>
+          <h2 class="panel__title">Made<br>to Be Worn</h2>
+          <p class="panel__spec"><i>Fit</i> Individually Made to Measure</p>
+        </article>
+
+        <article class="panel panel--right" data-panel="6">
+          <span class="panel__index">06</span>
+          <p class="panel__kicker">The Procession</p>
+          <h2 class="panel__title">A Language<br>of Colour</h2>
+          <p class="panel__spec"><i>Palette</i> Four Signature Tones</p>
+        </article>
+
+        <article class="panel panel--left" data-panel="7">
+          <span class="panel__index">07</span>
+          <p class="panel__kicker">The Detail</p>
+          <h2 class="panel__title">The Last<br>Quarter-Inch</h2>
+          <p class="panel__body">Functioning surgeon's cuffs. Horn buttons, each hand-shanked. Pick-stitching you will only ever find by touch.</p>
+          <p class="panel__spec"><i>Finish</i> Working Surgeon's Cuffs</p>
+        </article>
+
+        <!-- progress -->
+        <div class="progress"><span id="progressFill"></span></div>
+        <div class="scene-count"><span id="movementNo">00</span><i>/ 07</i></div>
+
+      </div>
+    </section>
+
+    <!-- ===== Outro / CTA ===== -->
+    <section class="outro" id="book">
+      <div class="outro__mark"><img src="assets/img/octaboot.png" alt="Octaboot" /></div>
+      <p class="eyebrow eyebrow--center">The House of Fashion</p>
+      <h2 class="outro__title">Tailoring<br>for the few.</h2>
+      <p class="outro__body">Every Octaboot suit is cut to one man and one man only. Begin with a conversation, a measure, and a single bolt of cloth chosen for you alone.</p>
+      <a class="btn" href="#book">Book a Private Fitting</a>
+
+      <footer class="site-footer">
+        <div class="foot-brand">
+          <img src="assets/img/octaboot.png" alt="" />
+          <span>OCTABOOT</span>
+        </div>
+        <div class="foot-cols">
+          <div><h4>Atelier</h4><a href="#">The House</a><a href="#">Full Canvas</a><a href="#">The Cloth Library</a></div>
+          <div><h4>Wardrobe</h4><a href="#">Suits</a><a href="#">Shirting</a><a href="#">Accessories</a></div>
+          <div><h4>Visit</h4><a href="#">Mayfair · London</a><a href="#">By Appointment</a><a href="#">Contact</a></div>
+        </div>
+        <p class="foot-legal">© <span id="year"></span> Octaboot Bespoke — Made by hand, for a lifetime.</p>
+      </footer>
+    </section>
+
+  </main>
+
+  <script src="assets/js/gsap.min.js"></script>
+  <script src="assets/js/ScrollTrigger.min.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
